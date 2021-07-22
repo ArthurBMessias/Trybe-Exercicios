@@ -1,0 +1,23 @@
+#tamcab {
+    font-size: 65px;
+    color: orange;
+    font-family: sans-serif;
+  }  
+
+  #fundolista {
+    background-color:aqua
+  }
+  
+  .estilolp {
+    background-color: darkmagenta;
+    line-height: 40px;
+  }
+
+  p {
+    font-weight: 600;
+    font-size: 48px;
+  }
+
+  body {
+    font-size: 16px;
+  }
