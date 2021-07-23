@@ -1,0 +1,13 @@
+h1,p {
+    text-align: center;
+
+}
+
+ol,ul:hover,:active {
+background-color: red;
+color: white;
+}
+
+ul {
+list-style: none;
+}
