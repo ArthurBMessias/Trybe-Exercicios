@@ -2,3 +2,29 @@
     padding: 0;
     margin: 0;
 }
+
+.center {
+    text-align: center;
+}
+
+.navy {
+    background-color: blueviolet;
+    border: 90px;
+    border-radius: 70px;
+    text-align: center;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.navy li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+.navy li a {
+    color: #fff;
+}
+
+.navy li a:hover, a:focus {
+     color: yellow;
+}
