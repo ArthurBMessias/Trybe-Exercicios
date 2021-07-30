@@ -1,8 +1,15 @@
 // exercicio 1
-//let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
-//    for (let numero of numbers) {
-//        console.log (numero);
-//    }
+// baby steps 
+// 1 Declarar o array
+// 2 iniciar laço for
+// 3 declarar variável contadora ou index ou i
+// 4 informar condição final (até onde o contador vai)
+// 5 Incrementar a variavel contadora ou index ou i
+// 6 depois imprimir com console log
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+    for (let i = 0; i < numbers.length; i += 1) {
+            console.log (numbers[i]);
+    }
 
 // exercicio 2
 // let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
