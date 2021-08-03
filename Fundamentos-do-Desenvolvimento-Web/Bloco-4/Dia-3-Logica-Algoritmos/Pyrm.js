@@ -2,8 +2,8 @@
 // imprima na tela um quadrado feito de asteriscos de lado de tamanho n . 
 
 let n = 6;
-let square = '*'
-for (let i = 0; i <= n.lenght; i += 1) {
-    square *= n[i]
+let square = 'n *'
+for (let i = 1; i < n.lenght; i += 1) {
+    square += n[i]
     console.log (square)
    } 
