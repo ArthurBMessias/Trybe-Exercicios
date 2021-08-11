@@ -57,11 +57,71 @@
   </head>
   <body>
     <script>
-    let newTitle = document.createElement('h1');
-    let title = document.createTextNode('Exercício 5.2 - JavaScript DOM');
-    newTitle.appendChild(title);
-    let body = document.querySelector('body');
-    body.appendChild(newTitle);
+      let newTitle = document.createElement("h1");
+      newTitle.innerText = "Exercício 5.2 - JavaScript DOM";
+      newTitle.className = "title";
+      document.body.appendChild(newTitle);
+
+      let newPrincipal = document.createElement("main");
+      newPrincipal.className = "main-content";
+      document.body.appendChild(newPrincipal);
+
+      let newS = document.createElement("section");
+      newS.className = "center-content";
+      newPrincipal.appendChild(newS);
+
+      let newPar = document.createElement("p");
+      newPar.innerText = "Texto teste adicionado";
+      newS.appendChild(newPar);
+
+      let newSs = document.createElement("section");
+      newSs.className = "left-content";
+      newPrincipal.appendChild(newSs);
+
+      let newSss = document.createElement("section");
+      newSss.className = "right-content";
+      newPrincipal.appendChild(newSss);
+
+      let newImage = document.createElement("img");
+      newImage.src = "https://picsum.photos/200";
+      newImage.className = "small-image";
+      newSs.appendChild(newImage);
+
+      let newListU = document.createElement("ul");
+      newSss.appendChild(newListU);
+      let newNumbersList = [
+        "Um",
+        "Dois",
+        "Três",
+        "Quatro",
+        "Cinco",
+        "Seis",
+        "Sete",
+        "Oito",
+        "Nove",
+        "Dez",
+      ];
+      for (let inc in newNumbersList) {
+        let newListLi = document.createElement("li");
+        newListLi.innerHTML = newNumbersList[inc];
+        newListU.appendChild(newListLi);
+      }
+
+      for (let i = 0; i < 3; i += 1) {
+        let h3 = document.createElement("h3");
+        h3.innerText = "Teste H3 aqui";
+        h3.className = "description";
+        newPrincipal.appendChild(h3);
+      }
+
+      newSs.remove();
+
+      newSss.style.margin = "auto";
+
+      newS.style.background = "green";
+
+      newListU.removeChild(newListU.lastChild);
+      newListU.removeChild(newListU.lastChild);
     </script>
   </body>
 </html>
