@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let newTitle = document.createElement("h1");
+      newTitle.innerText = "Exercício 5.2 - JavaScript DOM";
+      newTitle.className = "title";
+      document.body.appendChild(newTitle);
+
+      let newPrincipal = document.createElement("main");
+      newPrincipal.className = "main-content";
+      document.body.appendChild(newPrincipal);
+
+      let newS = document.createElement("section");
+      newS.className = "center-content";
+      newPrincipal.appendChild(newS);
+
+      let newPar = document.createElement("p");
+      newPar.innerText = "Texto teste adicionado";
+      newS.appendChild(newPar);
+
+      let newSs = document.createElement("section");
+      newSs.className = "left-content";
+      newPrincipal.appendChild(newSs);
+
+      let newSss = document.createElement("section");
+      newSss.className = "right-content";
+      newPrincipal.appendChild(newSss);
+
+      let newImage = document.createElement("img");
+      newImage.src = "https://picsum.photos/200";
+      newImage.className = "small-image";
+      newSs.appendChild(newImage);
+
+      let newListU = document.createElement("ul");
+      newSss.appendChild(newListU);
+      let newNumbersList = [
+        "Um",
+        "Dois",
+        "Três",
+        "Quatro",
+        "Cinco",
+        "Seis",
+        "Sete",
+        "Oito",
+        "Nove",
+        "Dez",
+      ];
+      for (let inc in newNumbersList) {
+        let newListLi = document.createElement("li");
+        newListLi.innerHTML = newNumbersList[inc];
+        newListU.appendChild(newListLi);
+      }
+
+      for (let i = 0; i < 3; i += 1) {
+        let h3 = document.createElement("h3");
+        h3.innerText = "Teste H3 aqui";
+        h3.className = "description";
+        newPrincipal.appendChild(h3);
+      }
+
+      newSs.remove();
+
+      newSss.style.margin = "auto";
+
+      newS.style.background = "green";
+
+      newListU.removeChild(newListU.lastChild);
+      newListU.removeChild(newListU.lastChild);
+    </script>
+  </body>
+</html>
