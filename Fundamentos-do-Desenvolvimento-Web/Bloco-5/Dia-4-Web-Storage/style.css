@@ -1,0 +1,25 @@
+.DarkMode {
+  background-color: black;
+  color: white;
+}
+
+#WhiteMode {
+  background-color: white;
+  color: black;
+}
+
+.changeColorText {
+  color: ;
+}
+
+.changeFontSize {
+  font-size: ;
+}
+
+.changeHeight {
+  font-weight: ;
+}
+
+.changeFontFamily {
+  font-family: ;
+}
