@@ -6,30 +6,42 @@ back preto
 1- criar botão com createelement
 2- adicionar classe no botão que receba a funcao click.
 3 - fundo preto letra branca e visse versa */
+window.onload = function () {
+  let criarBotao = document.createElement("button");
+  criarBotao.innerText = "Dark Mode";
 
-let criarBotao = document.createElement("button");
-criarBotao.innerText = "Dark Mode";
+  document.body.appendChild(criarBotao);
 
-document.body.appendChild(criarBotao);
+  function darkMode() {
+    criarBotao.addEventListener("click", function activeDarkMode() {
+      document.body.style.background = "black";
+      document.body.style.color = "white";
 
-function darkMode() {
-  criarBotao.addEventListener("click", function activeDarkMode() {
-    let backGround = document.body.style.background = "black";
-    document.body.style.color = "white";
-   
-    localStorage.setItem('backG',backGround.value);
-  });
-}
+      localStorage.setItem("background", "black");
+      localStorage.setItem("font", "white");
+    });
+  }
 
-darkMode();
+  darkMode();
 
-function normalMode (){
-criarBotao.addEventListener("dblclick", function changeBack() {
-  document.body.style.background = "unset";
-  document.body.style.color = "unset";
-});
-}
+  function normalMode() {
+    criarBotao.addEventListener("dblclick", function changeBack() {
+      document.body.style.background = "white";
+      document.body.style.color = "black";
 
-normalMode();
+      localStorage.setItem("background2", "white");
+      localStorage.setItem("font2", "black");
+    });
+  }
 
-let savePreference = localStorage.getItem('backG');
+  normalMode();
+
+   let saveBackgroundPreferenceBlack = localStorage.getItem("background");
+  document.body.style.background = saveBackgroundPreferenceBlack;
+  let saveFontPreference = localStorage.getItem("font");
+  document.body.style.color = saveFontPreference;
+  //let saveBackgroundPreferenceWhite = localStorage.getItem("background2");
+ // document.body.style.background = saveBackgroundPreferenceWhite;
+ // document.body.style.color = saveBlackFontPreference;
+
+};
