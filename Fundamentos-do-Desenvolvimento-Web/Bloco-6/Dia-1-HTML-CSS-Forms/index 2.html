@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Formulário de Cadastro de Currículo</h1>
+      <h2 class="sub-title"> Preencha os campos abaixo conforme solicitado</h2>
+    </header>    
+    <main>  
+      <form id="curriculum-form">
+        <div class="form-row">
+          <fieldset>
+            <div class="lineC">
+        <label for="input-text" >Nome Completo</label>
+        <input id="input-text" type="text" name="name" maxlength="40" required>
+        </div>
+        <div class="lineC">
+        <label for="email">Endereço de e-mail</label>
+        <input id="email" class="email-user" type="email" name="email" maxlength="50" required>
+        </div>
+        <div class="lineC">
+        <label for="cpf"> CPF </label>
+        <input id="cpf" class="email-user" type="email" name="cpf" maxlength="11" required>
+        </div>
+        <div class="lineC">
+          <label for="adress"> Endereço</label>
+          <input id="adress" class="adress-user" type="text" name="endereço" maxlength="200" required>
+        </div class="lineC">
+        <label for="city"> Cidade</label>
+        <input id="city" class="city-user" type="text" name="city" maxlength="28" required></input>
+        <div class="lineC" class="state">
+          <label for="dropdown-state">Estado</label>
+          <select name="state" id="dropdown-state" required>
+            <option disabled selected value>Qual o Estado Brother</option>
+          </select>
+          <div class="lineC">
+            <label id="house" >Você mora</label>
+            <input type="radio" name="house" id="house" value="house" required>Casa
+            <input type="radio" name="house" id="ap" value="ap" required>Apartamento
+          </div>
+        </div>
+      </form>
+    </main>
+    <script src="script2.js"></script>
+  </body>
+</html>
