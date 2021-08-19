@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  </head>
+  <body>
+    <header>
+      <h1>Formulário de Cadastro de Currículo</h1>
+      <h2> Preencha os campos abaixo conforme solicitado</h2>
+    </header>    
+    <main>  
+      <form>
+        <div>
+          <fieldset>
+            <div>
+        <label for="input-text" >Nome Completo</label>
+        <input id="input-text" type="text" name="name" maxlength="40" required>
+        </div>
+        <div>
+        <label for="email">Endereço de e-mail</label>
+        <input id="email" type="email" name="email" maxlength="50" required>
+        </div>
+        <div>
+        <label for="cpf"> CPF </label>
+        <input id="cpf" type="email" name="cpf" maxlength="11" required>
+        </div>
+        <div>
+          <label for="adress"> Endereço</label>
+          <input id="adress" type="text" name="endereço" maxlength="200" required>
+        </div>
+        <label for="city"> Cidade</label>
+        <input id="city" type="text" name="city" maxlength="28" required></input>
+        <div>
+          <label for="dropdown-state">Estado</label>
+          <select name="state" id="dropdown-state" required>
+            <option disabled selected value>Estado</option>
+          </select>
+          </div>
+          <div>
+            <label id="house" >Você mora</label>
+            <input type="radio" name="house" id="house" value="house" required>Casa
+            <input type="radio" name="house" id="ap" value="ap" required>Apartamento
+          </div>
+          <fieldset>
+            <div>
+            <label for="resume"> Conte suas experiências</label>
+            <textarea id="resume" name="resume" maxlength="1000" required> </textarea>
+            </div>
+            <div>
+              <label for="position"> Cargos</label>
+              <textarea id="position" name="position" maxlength="40" required> </textarea>
+              </div>
+              <div>
+                <label for="description-position">Descrição</label>
+                <textarea id="description-position" name="description-position" maxlength="500" required> </textarea>
+                </div>
+                <div>
+                  <label for="salary-claim">Pretensão Salarial</label>
+                  <select name="salary-claim" id="salary-claim" required>
+                    <option disabled selected value>Pretensão Salarial</option>
+                  </select>
+                  </div>
+          </fieldset>
+         </form>
+        
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
