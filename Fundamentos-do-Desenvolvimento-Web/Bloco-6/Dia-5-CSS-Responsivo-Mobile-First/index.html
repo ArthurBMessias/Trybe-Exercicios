@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormsProject</title>
+</head>
+<body>
+    <div>
+        <h1>Cadastro de DEVs</h1>
+        <p>Complete suas Informações</p>
+        <br>
+    </div>
+
+    <form>
+        <fieldset>
+            <div>
+                <label>Nome</label>
+                <input type="text" name="nome" id="nome">
+            </div>
+
+            <div>
+                <label>Sobrenome</label>
+                <input type="text" name="sobrenome" id="sobrenome">
+            </div>
+        </fieldset>
+
+        <div>
+            <label>E-mail</label>
+            <input type="email" name="email" id="email">
+        </div>
+        <div>
+            <label>Qual seu grau de instrução?</label>
+            <label>
+                <input type="radio" name="instrução" value="Superior">Superior
+                <input type="radio" name="instrução" value="Médio">Médio
+                <input type="radio" name="instrução" value="Fundamental">Fundamental
+            </label>
+        </div>
+        <div>
+            <label>Como deseja ser chamado?</label>
+            <select id="tratamento">
+                <option selected disabled value="">Selecione</option>
+                <option>Doutor(a)</option>
+                <option>Mestre(a)</option>
+                <option>Senhor(a)</option>
+            </select>
+        </div>
+        
+        <fieldset>
+            <div>
+                <label>Selecione seu último salário:</label> <br><br>
+                <input type="checkbox" id="salario1" nome="salario" value="R$1.000,00">
+                <label for="salario1">R$ 1.000,00</label>
+                <input type="checkbox" id="salario2" nome="salario" value="R$2.000,00">
+                <label for="salario2">R$ 2.000,00</label>
+                <input type="checkbox" id="salario3" nome="salario" value="R$3.000,00">
+                <label for="salario3">R$ 3.000,00</label>
+                <input type="checkbox" id="salario4" nome="salario" value="R$4.000,00">
+                <label for="salario4">R$ 1.000,00</label>
+                <input type="checkbox" id="salario5" nome="salario" value="R$8.000,00">
+                <label for="salario5">R$ 5.000,00</label>
+            </div>
+        </fieldset>
+        <div>
+            <br>
+            <label>Conte um pouco suas experiências:</label>
+            <textarea row="6" id="experiencia" name="experiencia"></textarea>
+        </div>
+
+        <button type="submit">Enviar</button>
+    </form>
+    
+</body>
+</html>
