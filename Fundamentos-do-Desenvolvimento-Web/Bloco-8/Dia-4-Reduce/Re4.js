@@ -65,13 +65,28 @@ const books = [
 
 // Adicione o código do exercício aqui:
 
-const expectedResult = "George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.";
 
-function reduceNames() {
-  let ponto = '.';
-    return books.filter((book) => book.author.name).map((author) => author.author.name).reduce((string, array) => [`${string}, ${array}`]).toString() + ponto
-  // escreva seu código aqui
-
-}
-console.log(reduceNames())
-assert.strictEqual(reduceNames(), expectedResult);
+const expectedResult = {
+    id: 1,
+    name: 'As Crônicas de Gelo e Fogo',
+    genre: 'Fantasia',
+    author: {
+      name: 'George R. R. Martin',
+      birthYear: 1948,
+    },
+    releaseYear: 1991,
+  };
+  
+  const longestNamedBook = () => {
+    const booksNames = books.map((book) => book.name);
+    let result = 0;
+    for(let i = 0; i < booksNames.length; i += 1) {
+    if(booksNames[i].length > result) {
+    result = booksNames[i];
+    }
+    }
+    
+    return books.find((book) => book.name === result);
+    } 
+  
+  assert.deepStrictEqual(longestNamedBook(), expectedResult);
