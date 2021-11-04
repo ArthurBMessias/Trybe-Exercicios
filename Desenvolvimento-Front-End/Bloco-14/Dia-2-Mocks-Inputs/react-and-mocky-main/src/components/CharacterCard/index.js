@@ -7,7 +7,7 @@ class CharacterCard extends React.Component {
             <article className='card'>
                 <img alt={name} src={image} />
                 <h3 className='card-name'>{name}</h3>
-                <p className='card-status'>{status}</p>
+                <p data-testid="status"className='card-status'>{status}</p>
             </article>
         )
     }
