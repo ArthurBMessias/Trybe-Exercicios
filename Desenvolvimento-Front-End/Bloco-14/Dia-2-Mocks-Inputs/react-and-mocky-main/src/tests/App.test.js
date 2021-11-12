@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import App from '../App';
 import responseApi from "./mocks"
 
@@ -18,12 +19,11 @@ describe('Test Rick & Morty API', () => {
     const title = await screen.findByRole("heading", {    
       level: 3,
       name: "Rick Sanchez", });
-    const img = screen.queryAllByRole('img')
-    // const deadOrAlive = await screen.findAllByText("Alive")
+
+    const img = screen.queryByAltText(/Rick Sanchez/i)
 
       expect(title).toBeInTheDocument()
       expect(img).toBeInTheDocument()
-      // expect(deadOrAlive).toBeInTheDocument()
   })
 
   test('Verifica se existem o input de texto e o botão "Buscar"', () => {
@@ -35,7 +35,15 @@ describe('Test Rick & Morty API', () => {
   })
 
   test('Verifica se ao buscar por "Smith" aparecem 4 cards', () => {
-    
+        const input = screen.getByRole('textbox');
+    const button = screen.getByRole('button');
+
+    userEvent.type(input, "Smith")
+    userEvent.click(button)
+
+    const card = screen.getAllByRole("heading", {name: /smith/i});
+    expect(card).toHaveLength(4)
+
   })
 
 })
