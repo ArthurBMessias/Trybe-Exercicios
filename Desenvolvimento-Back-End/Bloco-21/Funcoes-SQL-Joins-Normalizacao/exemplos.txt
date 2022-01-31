@@ -1,0 +1,12 @@
+SELECT UCASE('Oi, eu sou uma string');
+SELECT LCASE('Oi, eu sou uma string');
+SELECT REPLACE('Oi, eu sou uma string', 'string', 'cadeia de caracteres');
+
+SELECT LEFT('Oi, eu sou uma string', 7);
+
+SELECT RIGHT('Oi, eu sou uma string', 10);
+
+SELECT CHAR_LENGTH('Oi  ');
+
+SELECT SUBSTRING('Oi, eu sou uma string', 7 );
+

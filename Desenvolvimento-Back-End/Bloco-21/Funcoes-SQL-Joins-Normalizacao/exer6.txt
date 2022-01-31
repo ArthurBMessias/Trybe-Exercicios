@@ -1,0 +1,8 @@
+USE sakila;
+-- // forma de exibir valores agrupados (sem repetição)
+SELECT district FROM address
+GROUP BY district;
+
+SELECT district, COUNT(*) FROM address
+GROUP BY district
+HAVING COUNT(*) > 9;
