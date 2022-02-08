@@ -1,0 +1,1 @@
+console.log(`Seu imc é de ${calculateIMC()}`);

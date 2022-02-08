@@ -1,0 +1,15 @@
+{
+  "name": "imcalc",
+  "version": "1.0.0",
+  "description": "let's calculate our imc",
+  "main": "index.js",
+  "scripts": {
+    "imc": "node imc.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "imc"
+  ],
+  "author": "Arthur Bernardo Messias",
+  "license": "ISC"
+}
