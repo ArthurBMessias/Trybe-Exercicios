@@ -47,7 +47,19 @@ const getAll = async () => {
   return authors.map(serialize).map(getNewAuthor);
 };
 
+const isValid = (firstName, _middleName, lastName) => {
+  if (!firstName || typeof firstName !== 'string') return false;
+  if (!lastName || typeof lastName !== 'string') return false;
+  return true;
+}
+
+const create = async (firstName, middleName, lastName) => {
+  await connection.execute('INSERT INTO model_example.authors (first_name, middle_name, last_name) VALUES (?, ?, ?)', [firstName, middleName, lastName]);
+}
+
 module.exports = {
   getAll,
   findAuthorById,
+  isValid,
+  create,
 };
