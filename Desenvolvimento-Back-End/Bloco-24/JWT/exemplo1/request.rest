@@ -1,0 +1,29 @@
+GET http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiR2FicmllbCIsImlhdCI6MTY0NjgzMzk1NiwiZXhwIjoxNjQ2ODMzOTcxfQ.3aJoLsxmVAWOB3gV3EheAxMWF5w93l3ROpWtdwVEzhE
+
+###
+
+DELETE http://localhost:4000/logout
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiR2FicmllbCIsImlhdCI6MTY0NjgzNDM4M30.I6V4ZrjrEX9qXw05e59Nf30cJZKTrKUIeu7YQHJfCIU"
+}
+
+###
+
+POST http://localhost:4000/token
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiR2FicmllbCIsImlhdCI6MTY0NjgzNDM4M30.I6V4ZrjrEX9qXw05e59Nf30cJZKTrKUIeu7YQHJfCIU"
+}
+
+###
+
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+  "username": "Gabriel"
+}
