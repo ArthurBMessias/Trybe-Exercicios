@@ -1,0 +1,209 @@
+type Bird = {
+    asaEsquerda: string,
+    asaDireita: string,
+    bico: string,
+    patas: string,
+}
+
+type Sum = {
+    num1: number,
+    num2: number,
+}
+
+type Addres = {
+    street: string,
+    numberH: number,
+    state: string,
+    country: string,
+    CEP: number,
+    complement?: string
+}
+
+// documento id de uma pessoa pode ter strings e numbers
+type id = number | string;
+const person = {
+    id: 7777
+}
+
+// sistemas operacionais:
+type OS = 'linux' | 'windows' | 'mac'
+const system: OS = 'linux'
+
+// Crie type de vogais:
+
+type vogals = 'a'| 'e' | 'i' | 'o' | 'u'
+
+const itsVogal = (a: vogals, letter: string) => {
+    if(letter === a){
+        return 'its a vogal'
+    } return 'its not a vogal'
+}
+
+// criando cavaleiros
+
+enum Caste {
+    Bronze = 'Bronze',
+    Silver = 'Prata',
+    Gold = 'Ouro',
+}
+
+class Knight {
+    name: string;
+    age: number;
+    caste: Caste;
+    power?: number
+
+    constructor(name: string, age: number, caste: Caste, power?: number) {
+        this.name = name;
+        this.age = age;
+        this.caste = caste;
+        this.power = power;
+    }
+
+    attack(): string{
+        return `${this.name}, o cavaleiro de ${this.caste}, está atacando!`
+    }
+}
+
+const knight1 = new Knight('Seiya', 17, Caste.Bronze, 500);
+console.log(knight1);
+console.log(knight1.attack())
+
+// criar uma interface que representa objeto de um carro; (interface serve apenas para objeto, type é mais abrangente e serve para para arrays)
+ interface Car{
+     brand: string,
+     year: number,
+     value: number,
+     sale: boolean,
+ }
+
+ const car: Car = {
+     brand: 'Ferrari',
+     year: 2019,
+     value: 300.000,
+     sale: true,
+ }
+
+// unknown pode se transformar em tipo e manter. O any pode mutar em qualquer hora e isso é perigoso.
+function useState<S extends number | string = string >() {
+    let state: S;
+
+    function getState() {
+        return state;
+    }
+
+    function setState(newState: S) {
+        state = newState;
+    }
+
+    return { getState, setState }
+}
+
+const newState = useState();
+
+newState.setState('123');
+console.log(newState.getState())
+
+enum Colors {
+    Black = 'Preto',
+    White = 'Branco',
+    Red = 'Vermelho',
+    Silver = 'Prata'
+}
+
+enum Turn {
+    Left = 'left',
+    Right = 'right',
+    Front = 'front',
+    Back = 'back'
+}
+
+enum Door {
+    Open = 'open',
+    Close = 'close'
+}
+
+class Car {
+    brand: string;
+    color: Colors;
+    doors: number;
+
+    constructor(brand: string, color: Colors, doors: number) {
+        this.brand = brand;
+        this.color = color;
+        this.doors = doors;
+    }
+
+    honk(): string{
+        return 'HONK HONK HONK EHAHAHAHHAHABHAH EEEEEEEEEEEEEEEEEAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
+    }
+    
+    openTheDoor(door: Door){
+        return `Its time to let the door ${Door.Open}`;
+    }
+
+    closeTheDoor(door: Door){
+        return `Its time to let the door ${Door.Close}`;
+
+    }
+
+    turnOn(){
+        return `Lets run vrum vrum ON`
+
+    }
+
+    turnOff(){
+        return `Go a mimir bye`
+
+    }
+
+    speedUp(){
+        return `AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA`
+
+
+    }
+
+    speedDown(){
+        return `Pare`
+
+    }
+
+    stop(){
+
+    }
+
+    turn(direction: Turn){
+        if( direction === 'left'){
+            return Turn.Left
+        }
+        if( direction === 'right'){
+            return Turn.Right
+
+        }
+        if( direction === 'front'){
+            return Turn.Front
+
+        }
+        if( direction === 'back'){
+            return Turn.Back
+
+        } else return 'hi'
+    }
+
+
+
+}
+
+const care = new Car('volkswagen', Colors.White, 4); // "cria carro"
+
+care.openTheDoor(Door.Open); // abre porta motorista
+care.turnOn(); // liga
+care.speedUp(); // acelera
+care.turn(Turn.Front) // siga em frente 
+care.turn(Turn.Left) // vira a esquerda
+console.log(care.speedUp()) // acelerando novamente
+care.turn(Turn.Right) // vira a direita
+care.turn(Turn.Front) // Siga em frente
+care.turn(Turn.Right) // Vira a direita
+care.turn(Turn.Right) // Vira a direita
+care.stop() // para o cara
