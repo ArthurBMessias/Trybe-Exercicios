@@ -1,0 +1,11 @@
+POST http://localhost:3333/categories
+Content-Type: application/json
+
+{
+    "name": "Sedan",
+    "description": "Categoria de Carro Sedan"
+}
+
+###
+
+GET http://localhost:3333/categories
