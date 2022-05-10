@@ -1,0 +1,8 @@
+docker file faz o 'packge" para empacotar uma image, tem tudo que é necessário para rodar. 
+
+Com a imagem criada, dizemos para o docker iniciar um container (que contem variavéis de ambiente, libs...) - é um processo - 
+
+uma forma de rodar a aplicação dentro do container (em ambiente isolado)
+
+Se não ter a image o docker vai baixar ela.
+docker ps -a para ver todos os containers executados(ativos e inativos)
