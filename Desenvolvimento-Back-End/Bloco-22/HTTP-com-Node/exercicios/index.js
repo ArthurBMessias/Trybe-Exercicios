@@ -27,6 +27,6 @@ app.put("/users/:name/:age", (req, res) => {
     return res.status(200).json({ message: `Seu nome de guerra é ${name} e você tem ${age} anos de idade`});
 })
 
-app.listen(3002, () => {
-  console.log('Aplicação ouvindo na porta 3002');
+app.listen(3005, () => {
+  console.log('Aplicação ouvindo na porta 3005');
 });
